@@ -9,8 +9,9 @@
     "supertest": "^4.0.2"
   },
   "scripts": {
-    "serve": "ts-node ./server.ts",
-    "start": "nodemon"
+    "serve": "ts-node src/server.ts",
+    "start": "nodemon",
+    "test": "jest"
   },
   "devDependencies": {
     "@types/jest": "^25.2.2",
