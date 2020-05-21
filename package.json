@@ -6,6 +6,7 @@
     "koa-json": "^2.0.2",
     "koa-logger": "^3.2.1",
     "koa-router": "^8.0.8",
+    "mongoose": "^5.9.15",
     "supertest": "^4.0.2"
   },
   "scripts": {
@@ -19,6 +20,7 @@
     "@types/koa-json": "^2.0.18",
     "@types/koa-logger": "^3.1.1",
     "@types/koa-router": "^7.4.1",
+    "@types/mongoose": "^5.7.21",
     "jest": "^26.0.1",
     "nodemon": "^2.0.4",
     "ts-jest": "^26.0.0",
