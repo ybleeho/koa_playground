@@ -6,7 +6,12 @@
     "module": "commonjs",
     "target": "es6",
     "sourceMap": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "baseUrl": "./src",
+    "paths": {
+      "@controller/*": ["controller/*"],
+      "@models/*": ["models/*"]
+    }
   },
   "exclude": [
     "node_modules"
