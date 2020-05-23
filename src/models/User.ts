@@ -10,8 +10,8 @@ export interface UserModel extends User, Document {
 }
 
 const userSchema = new Schema({
-    username: String,
-    _createdAt: {type: Date, default: Date.now}
+    name: String,
+    createdAt: {type: Date, default: Date.now}
 }, {
     versionKey: false
 });

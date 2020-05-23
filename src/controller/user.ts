@@ -2,14 +2,13 @@ import User from '@models/User'
 
 class UserController {
 
-    create = async (ctx) => {
+    public static create = async (ctx) => {
         ctx.body = await User.create({
-            name: ctx.request.body.name,
-            createdAt: new Date()
+            name: ctx.request.body.name
         })
-    }
+    };
 
-    get = async (ctx) => {
+    public static get = async (ctx) => {
         ctx.body = await User.findById(ctx.params.id)
     }
 
