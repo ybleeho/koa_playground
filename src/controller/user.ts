@@ -1,6 +1,5 @@
 import User from '@models/User'
 import {Context} from "koa"
-import Any = jasmine.Any;
 
 class UserController {
 
