@@ -49,9 +49,7 @@
       "!**/build/**",
       "!**/coverage/**"
     ],
-    "transform": {
-      "\\.ts$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
-    },
+    "preset": "ts-jest",
     "coverageThreshold": {
       "global": {
         "branches": 100,
@@ -69,6 +67,11 @@
       "/node_modules/",
       "/build/",
       "/coverage/"
-    ]
+    ],
+    "moduleNameMapper": {
+      "^@controller/(.*)$": "<rootDir>/src/controller/$1",
+      "^@models/(.*)$": "<rootDir>/src/models/$1",
+      "^@routes/(.*)$": "<rootDir>/src/routes/$1"
+    }
   }
 }
