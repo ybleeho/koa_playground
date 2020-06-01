@@ -1,10 +1,12 @@
-import supertest from 'supertest';
+import request from 'supertest';
 
 import app from '../src/app';
 
 const server = app.callback();
 
-test('Router Tests' , async () => {
-    const response = await supertest(server).get('/users/5ecf6294bda62e3ce6f5b784')
-    expect(response.status).toEqual(200);
+describe('Router Tests', () => {
+    test('should respond with 200 (/)' , async () => {
+        const response = await request(server).get('/')
+        expect(response.status).toEqual(200);
+    })
 })

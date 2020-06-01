@@ -18,4 +18,4 @@ router.use('/users', UserRouter);
 
 app.use(router.routes());
 
-export = app;
+export default app;

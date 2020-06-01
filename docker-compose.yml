@@ -1,0 +1,19 @@
+version: "3"
+services:
+  koa-app:
+    build:
+      context: .
+    container_name: "koa-playground"
+    image: koa-playground:latest
+    ports:
+    - 3030:3000
+    links:
+      - mongodb
+    depends_on:
+      - mongodb
+  mongodb:
+    image: mongo:latest
+    container_name: "mongodb-latest"
+    ports:
+      - "27018:27017"
+    command: mongod
