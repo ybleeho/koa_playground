@@ -17,5 +17,6 @@ router.get('/', (ctx: Koa.Context) => {
 router.use('/users', UserRouter);
 
 app.use(router.routes());
+app.use(router.allowedMethods());
 
 export default app;
