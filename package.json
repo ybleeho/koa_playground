@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "apollo-server-koa": "^2.14.2",
+    "elasticsearch": "^16.7.1",
     "koa": "^2.11.0",
     "koa-bodyparser": "^4.3.0",
     "koa-json": "^2.0.2",
@@ -15,6 +16,7 @@
     "build": "tsc  -p ."
   },
   "devDependencies": {
+    "@types/elasticsearch": "^5.0.36",
     "@types/graphql": "^14.5.0",
     "@types/jest": "^25.2.2",
     "@types/koa-bodyparser": "^4.3.0",
