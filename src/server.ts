@@ -1,6 +1,6 @@
 import 'dotenv/config';
 import app from './app';
-import './database'
+import database from "./database";
 import {ApolloServer, gql} from 'apollo-server-koa';
 import {Client} from "elasticsearch";
 
@@ -10,6 +10,7 @@ import schema from 'schema';
 const apolloServer = new ApolloServer({
     typeDefs: schema,
     resolvers,
+    tracing: true,
 });
 
 apolloServer.applyMiddleware({app: app, path: '/graphql'});
@@ -22,9 +23,13 @@ elasticClient.ping({
 const port = process.env.PORT || 3333
 const server = app.listen( port, () => console.info(`Listening to http://localhost:${port}/graphql 🚀`));
 
-process.on("SIGTERM", () => {
-    console.info('SIGTERM signal received.');
+process.on("SIGINT", () => {
+    console.info('SIGINT signal received.');
     server.close(() => {
         console.log('Http server closed.');
+        database.close(() => {
+            console.log('MongoDb connection closed.');
+            process.exit(0);
+        })
     });
 });

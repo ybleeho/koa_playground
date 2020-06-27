@@ -2,13 +2,14 @@
   "dependencies": {
     "apollo-server-koa": "^2.14.2",
     "dotenv": "^8.2.0",
-    "graphql": "^15.1.0",
     "elasticsearch": "^16.7.1",
+    "graphql": "^15.1.0",
     "koa": "^2.11.0",
     "koa-bodyparser": "^4.3.0",
     "koa-json": "^2.0.2",
     "koa-logger": "^3.2.1",
     "koa-router": "^8.0.8",
+    "lodash": "^4.17.15",
     "mongoose": "^5.9.15"
   },
   "scripts": {
@@ -77,7 +78,8 @@
     "moduleNameMapper": {
       "^@controller/(.*)$": "<rootDir>/src/controller/$1",
       "^@models/(.*)$": "<rootDir>/src/models/$1",
-      "^@routes/(.*)$": "<rootDir>/src/routes/$1"
+      "^@routes/(.*)$": "<rootDir>/src/routes/$1",
+      "^@loader/(.*)$": "<rootDir>/src/loader/$1"
     }
   }
 }

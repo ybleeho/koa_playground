@@ -8,9 +8,8 @@
     "esModuleInterop": true,
     "baseUrl": "./src",
     "paths": {
-      "@controller/*": ["controller/*"],
-      "@models/*": ["models/*"],
-      "@routes/*": ["routes/*"]
+      "@loader/*": ["loader/*"],
+      "@models/*": ["models/*"]
     }
   },
   "exclude": [

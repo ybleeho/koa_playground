@@ -1,15 +1,4 @@
-import User from "@models/User";
+import userResolvers from "./user";
+import {merge} from 'lodash';
 
-const resolvers = {
-    Query: {
-        hello: () => 'Hello world!',
-        getAll: async (parent, args) => await User.find({})
-    },
-    Mutation: {
-        createUser: async (_, { name }, { dataSources }) => {
-            return await User.create({name})
-        }
-    }
-};
-
-export default resolvers
+export default merge(userResolvers)

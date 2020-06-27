@@ -1,14 +1,12 @@
-import {Schema, Document, model} from 'mongoose';
+import {Document, model, Model, Schema} from 'mongoose';
 
-export interface User {
-    name: string;
-    age: number;
-    address: string;
-    number: string;
-}
 
-export interface UserModel extends User, Document {
-    createdAt: Date;
+export interface UserModel extends Document{
+    name: string,
+    age: number,
+    address: string,
+    number: string,
+    createdAt: Date
 }
 
 const userSchema = new Schema({
@@ -27,3 +25,4 @@ const userSchema = new Schema({
 });
 
 export default model<UserModel>('User', userSchema)
+

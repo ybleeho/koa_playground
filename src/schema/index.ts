@@ -1,21 +1,12 @@
 import {gql} from "apollo-server-koa";
-
-const typeDefs = gql`
+import userSchema from "./user";
+const schema = gql`
     type Query {
-        hello: String
-        getAll: [User]
+        _empty: String
     }
-    
     type Mutation {
-        createUser(name: String): User
-    }
-    
-    type User {
-        name: String
-        age: Int
-        address: String
-        number: String
+        _empty: String
     }
 `;
 
-export default typeDefs
+export default [schema, userSchema]
