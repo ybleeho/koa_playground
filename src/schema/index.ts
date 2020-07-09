@@ -1,4 +1,4 @@
-import {gql} from "apollo-server-koa";
+import { gql } from "apollo-server-koa";
 import userSchema from "./user";
 const schema = gql`
     type Query {

@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@types/lodash": "^4.14.157",
     "apollo-server-koa": "^2.14.2",
     "dotenv": "^8.2.0",
     "elasticsearch": "^16.7.1",
@@ -10,13 +11,19 @@
     "koa-logger": "^3.2.1",
     "koa-router": "^8.0.8",
     "lodash": "^4.17.15",
+    "module-alias": "^2.2.2",
     "mongoose": "^5.9.15"
   },
   "scripts": {
     "serve": "ts-node -r tsconfig-paths/register src/server.ts",
     "start": "nodemon",
     "test": "jest",
-    "build": "tsc  -p ."
+    "build": "tsc  -p .",
+    "start-prod": "yarn build && node build/src/server.js"
+  },
+  "_moduleAliases": {
+    "@loader": "build/src/loader",
+    "@models": "build/src/models"
   },
   "devDependencies": {
     "@types/dotenv": "^8.2.0",
