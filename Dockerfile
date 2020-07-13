@@ -7,11 +7,9 @@ WORKDIR /usr/src/app
 COPY ./package.json ./
 COPY ./yarn.lock ./
 COPY ./tsconfig.json ./
-
 RUN yarn
 
 COPY . .
-
 EXPOSE 3000 3000
 
-CMD [ "yarn", "serve" ]
+CMD [ "yarn", "start-prod" ]

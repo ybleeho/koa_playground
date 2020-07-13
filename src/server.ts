@@ -1,11 +1,11 @@
-import 'dotenv/config';
+import 'module-alias/register';
 import app from './app';
 import database from "./database";
 import { ApolloServer } from 'apollo-server-koa';
 
 import resolvers from './resolvers';
 import schema from './schema';
-import 'module-alias/register';
+
 
 const apolloServer = new ApolloServer({
     typeDefs: schema,

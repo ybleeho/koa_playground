@@ -6,7 +6,7 @@ services:
     container_name: "koa-playground"
     image: koa-playground:latest
     ports:
-    - 3030:3000
+    - 3333:3333
     links:
       - mongodb
     depends_on:
