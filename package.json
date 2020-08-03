@@ -19,7 +19,7 @@
     "start": "nodemon",
     "test": "jest",
     "build": "tsc  -p .",
-    "start-prod": "yarn build && node build/src/server.js"
+    "start-prod": "yarn build && node -r dotenv/config build/src/server.js"
   },
   "_moduleAliases": {
     "@loader": "build/src/loader",
