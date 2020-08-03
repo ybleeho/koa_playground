@@ -10,6 +10,5 @@ COPY ./tsconfig.json ./
 RUN yarn
 
 COPY . .
-COPY ./env.example ./.env
 EXPOSE 3000 3000
 CMD [ "yarn", "start-prod" ]
