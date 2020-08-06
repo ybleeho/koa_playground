@@ -8,7 +8,7 @@ COPY ./package.json ./
 COPY ./yarn.lock ./
 COPY ./tsconfig.json ./
 
-COPY ./.env.example ./env
+COPY ./.env.example ./.env
 RUN yarn
 
 COPY . .
