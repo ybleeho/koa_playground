@@ -1,4 +1,6 @@
 {
+  "name": "playground",
+  "license": "ISC",
   "dependencies": {
     "@types/lodash": "^4.14.157",
     "apollo-server-koa": "^2.14.2",
@@ -19,11 +21,11 @@
     "start": "nodemon",
     "test": "jest",
     "build": "tsc  -p .",
-    "start-prod": "yarn build && node -r dotenv/config build/src/server.js"
+    "start-prod": "yarn build && node -r dotenv/config build/server.js"
   },
   "_moduleAliases": {
-    "@loader": "build/src/loader",
-    "@models": "build/src/models"
+    "@loader": "build/loader",
+    "@models": "build/models"
   },
   "devDependencies": {
     "@types/dotenv": "^8.2.0",
