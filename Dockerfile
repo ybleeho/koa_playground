@@ -12,5 +12,5 @@ COPY ./.env.example ./.env
 RUN yarn
 
 COPY . .
-EXPOSE 3000 3000
+EXPOSE 3000
 CMD [ "yarn", "start-prod" ]
