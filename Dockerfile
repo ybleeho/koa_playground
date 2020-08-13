@@ -9,8 +9,9 @@ COPY ./yarn.lock ./
 COPY ./tsconfig.json ./
 
 COPY ./.env.example ./.env
-RUN yarn
-
 COPY . .
+
+RUN yarn && yarn build
+
 EXPOSE 3000
-CMD [ "yarn", "start-prod" ]
+CMD [ "yarn", "start" ]

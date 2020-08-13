@@ -18,10 +18,10 @@
   },
   "scripts": {
     "serve": "ts-node -r tsconfig-paths/register -r dotenv/config src/server.ts",
-    "start": "nodemon",
+    "dev": "nodemon",
     "test": "jest",
     "build": "tsc  -p .",
-    "start-prod": "yarn build && node -r dotenv/config build/server.js"
+    "start": "node -r dotenv/config build/server.js"
   },
   "_moduleAliases": {
     "@loader": "build/loader",
